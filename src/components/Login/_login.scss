@@ -1,0 +1,109 @@
+.login-container {
+    width: 100%;
+    height: 100vh;
+    // background-image: linear-gradient(to top, #00c6fb 0%, #005bea 100%);
+    background-color: #fafbfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+
+    .modal {
+        position: inherit;
+        width: 94%;
+        max-width: 340px;
+        height: 460px;
+        display: flex;
+        margin: 0 auto;
+        box-shadow: 4px 15px 20px 0px rgba(0, 0, 0, 0.15);
+
+        .cover {
+            height: auto;
+            padding: 30px 15px 5px;
+
+            h2 {
+                font-family: $font-bold;
+                color: #565656;
+                display: inline-block;
+                margin: 20px auto 10px;
+                font-size: 20px;
+                border-bottom: 2px solid #565656;
+            }
+        }
+
+        .login {
+            width: 340px;
+            background: #fff;
+
+            .cover {
+                width: 100%;
+                height: 100px;
+                background-color: #495aff;
+                padding: 28px;
+
+                h2 {
+                    font-size: 24px;
+                    color: #fff;
+                    text-transform: uppercase;
+                    border-bottom: 0;
+                    text-align: center;
+                    width: 100%;
+                }
+            }
+
+            @include element("login-element") {
+                margin: 80px 0;
+
+                .input-element {
+                    font-size: 18px;
+                    width: calc(100% - 60px);
+                    margin: 0 30px 10px;
+                    height: auto;
+                    text-align: left;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    background-color: #fcfcfc;
+                    border-radius: 3px;
+                    padding: 4px 10px;
+                    border: 1px solid #eee;
+                    @include transition();
+
+                    &:focus {
+                        border-color: #ccc;
+                    }
+
+                    label {
+                        color: #777;
+                        width: 20px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: auto 4px;
+                        font-size: 17px;
+                    }
+
+                    .fa-lock {
+                        font-size: 19px;
+                    }
+
+                    input[type="text"],
+                    input[type="email"],
+                    input[type="password"] {
+                        width: 100%;
+                        height: 42px;
+                        padding: 0 4px;
+                        background-color: #fcfcfc;
+                        border: 0;
+
+                        &:focus {
+                            border-color: none;
+                            box-shadow: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
