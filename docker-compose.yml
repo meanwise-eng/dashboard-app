@@ -1,9 +1,9 @@
 version: "2"
 
 services:
- app:
+ dashboard:
     build: .
     volumes:
       - .:/app/
     ports:
-      - "8000:8000"
+      - "3000:3000"

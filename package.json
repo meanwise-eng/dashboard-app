@@ -7,7 +7,7 @@
   "author": "PunitGr <groove679@gmail.com>",
   "private": true,
   "scripts": {
-    "start-dev": "webpack-dev-server --content-base . --history-api-fallback --hot --inline --progress --colors --host 0.0.0.0 --port 8000",
+    "start-dev": "webpack-dev-server --content-base . --history-api-fallback --hot --inline --progress --colors --host 0.0.0.0 --port 3000",
     "compile-sass": "sass --watch assets/styles:assets/css src/components:assets/css --style compressed",
     "start": "NODE_ENV=development concurrently \"npm run start-dev\" \"npm run compile-sass\"",
     "start-server": "NODE_ENV=production node server.js",
