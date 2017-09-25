@@ -15,9 +15,14 @@ RUN mkdir -p /app
 
 RUN npm install -g yarn
 
-RUN cd /app && \
-    yarn
+COPY package.json /app/package.json
+
+ADD ./start.sh /start.sh
+
+RUN cd /app
 
 WORKDIR /app
+
+ENTRYPOINT ["/start.sh"]
 
 CMD ["yarn", "start"]
